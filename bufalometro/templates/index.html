@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block content %}
+<div>
+    <div id="bufala" class="bufalogo"></div>
+    <div style="display: inline-block; vertical-align: middle; height: 160px;">
+        <div id="main-meter" class="meter"></div>
+        <div style="padding-top: 10px;">
+            <button type="button" class="btn btn-primary btn-start spectral" id="start">Analisi Bufala Pro!</button>
+        </div>
+    </div>
+
+    <div class="spectral form-group text-white lead">
+        <label for="text">Inserisci la notizia:</label>
+        <p class="form-control" style="text-align: left;" rows="8" 
+           id="input" contenteditable="true">{{text}}
+        </p>
+    </div>
+    <div style="margin-bottom: 10px;">Fai click su un contatore per ottenere l'analisi avanzata:</div>
+    <div class="meter-container meter-hspace">
+        <div class="meter-title">Positività</div>
+        <div id="left-meter" class="meter"></div> 
+    </div>
+    <div class="meter-container meter-hspace">
+        <div class="meter-title">Lerciosità</div>
+        <div id="center-meter" class="meter"></div>
+    </div>
+    <div class="meter-container">
+        <div class="meter-title">Sospettosità</div>
+        <div id="right-meter" class="meter"></div>
+    </div>
+    <hr/>
+    <div style="text-align: justify; font-size: smaller;">
+    <p>
+    I contatori piccoli analizzano di continuo il testo, e rappresentano alcune caratteristiche di esso:
+    </p>
+    <ul>
+        <li><b>Positività</b> è la misura del grado di positività della notizia. Se questa è una bufala, ovviamente il tachimetro andrà fuori scala!</li>
+        <li><b>Lerciosità</b> quantifica la similitudine con lo stile degli articoli del sito <a style="color: black;" href="http://lercio.it">lercio.it</a>.
+            Più è lerciosa la notizia, più è alta la probabilità che si tratti di una bufala.</li>
+        <li><b>Sospettosità</b> è una misura segreta basata su una tecnologia unica del Bufalometro.</li>
+    </ul>
+    <p>
+    Cliccando su uno di questi contatori, vengono messe in evidenza le parole che contribuiscono a far crescere (e decrescere) il livello.
+    </p>
+    <p>Il contatore grande in alto si avvia quando premi il tasto "Analisi Bufala Pro". Questo contatore misura la credibilità della frase, facendo un controllo di quante fonti (ritenute credibili) hanno parlato di questo prima.
+    </p>
+    </div>
+    
+</div>
+{% endblock %} 
+
+{% block js %}
+<script src="{{url_for('static', filename='js/caret.js')}}"></script>
+<script src="{{url_for('static', filename='js/index.js')}}"></script>
+<!-- Meter stuff -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="{{url_for('static', filename='js/canvas_utils.js')}}"></script>
+<script src="{{url_for('static', filename='js/jquery.timers.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/MeterWidget-1.0.js')}}"></script>
+<script>
+    var page = new Page();
+    $(document).ready(function() { page.init(); });
+</script>
+{% endblock %}

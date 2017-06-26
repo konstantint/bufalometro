@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- AIHackApp V{{config['VERSION']}} -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <title>{% block title %}Il Bufalometro!{% endblock %}</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon-64.png')}}" />
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" /> 
+    {% block css %}{# page-specific CSS #}{% endblock %} 
+</head>
+
+<body class="bg-info">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-toggleable navbar-light bg-faded fixed-top">
+
+        <a class="navbar-brand" href="/">
+            <img src="{{url_for('static', filename='images/bufalogo-small.png')}}" height="60" alt="">
+            <span class="spectral" id="brand-title">Il Bufalometro!</span>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="container text-center mt-5 wrapper" id="maincontent">
+        {% block content %}{# main content area #}{% endblock %}
+    </div>
+
+    {% block js %}{# defer-capable JS block #}{% endblock %}
+</body>
+
+</html>

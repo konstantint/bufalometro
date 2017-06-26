@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<div>
+    <h1 class="spectral display-4">Che cos'è il Bufalometro?</h1>
+    <p class="text-justify">Il Bufalometro è un sofisticato sistema di <i>natural language processing</i> basato sullo stato dell'arte in materia di intelligenza artificiale e tecnologie di riconoscimento di bufale. Il sistema è eccezionalmente sensibile a qualunque tipo di bufala, presente in un dato testo, sia esso un articolo di giornale, un SMS, una conferenza presidenziale o un contratto legale.   
+    </p>
+    <p class="text-justify">Oltre ad offrire un modo per controllare la quantità di bufale potenzialmente presenti in un testo, il sistema è in grado di suggerire quali entità lessicali (aka parole) contribuiscono maggiormente al livello di "bufalosità" in un dato documento. Grazie a questa conoscenza, l'utente è libero di modificare il proprio testo in modo da ottenere precisamente il livello di bufalosità che desidera presentare ai propri lettori. Questa flessibilità è senza precedenti nel mondo della moderna IA.</p>
+    <p class="text-justify"><b>Il Bufalometro è per tutti:</b></p>
+    <ul class="text-justify">
+        <li><b>Per chi legge notizie</b> il bufalometro offre un rifugio sicuro dalle bufale.</li>
+        <li><b>Per chi scrive notizie</b> il bufalometro offre uno strumento professionale per creare contenuti con un ben determinato livello di bufalosità.</li>
+        <li><b>Per chi investe</b> il bufalometro offre una possibilità di investire nel futuro della moderna IA.</li>
+        <li><b>Per la democrazia</b> il bufalometro fornisce un modo per democratizzare le bufale per tutti noi!</li>
+        <li><b>Per la scienza</b> il bufalometro sposta significativamente in avanti i limiti del moderno NLP e della comprensione delle bufale.</li>
+    </ul>
+    <h1 class="spectral display-4">Il team</h1>
+    <p>Il Bufalometro è stato creato da un team di talentuosi ingegneri durante il <a href="http://ai.hackathon.com/" target="_blank" style="color: black; text-decoration: underline;">Global AI Accroccathon</a> weekend a Roma.</p>
+    <p style="text-align: center">
+        <img src="{{url_for('static', filename='images/devi.gif')}}"></img>
+    </p>
+    <p style="text-align: center">
+        <img src="{{url_for('static', filename='images/accroccathon.png')}}" style="width: 300px"></img>
+    </p>
+</div>
+{% endblock %}
