@@ -71,4 +71,4 @@ License
 - The source code of the project is subject to the MIT License.
 - The texts of the webpage, the logo and team images are not licensed for public redistribution.
 - The project relies on several third-party open-source libraries. 
-   Each of these libraries may be subject to its own license.
+  Each of these libraries may be subject to its own license.
