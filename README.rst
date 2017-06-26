@@ -12,9 +12,9 @@ A. Text analysis for measuring the *style* of the message.
 
    During the hackathon three basic NLP models were deployed in their most simplistic form:
    
-      - A classical *sentiment analysis* model, trained to recognize literal positivity in the `SENTIPOLC <http://www.di.unito.it/~tutreeb/sentipolc-evalita16/>`_ corpus.
-      - A *"Lerciosity"* classifier, trained to discriminate between texts of the Italian Wikinews articles and texts of the joke-news website http://lercio.it. The former dataset was collected by downloading the official dump, whilst the latter - by scraping the website.
-      - A *"Referencity"* classifier, trained on the texts of the Italian Wikipedia to predict whether a given sentence would be followed by a reference footnote. Presumably, such sentences would contain facts which may require checking.
+   - A classical *sentiment analysis* model, trained to recognize literal positivity in the `SENTIPOLC <http://www.di.unito.it/~tutreeb/sentipolc-evalita16/>`_ corpus.
+   - A *"Lerciosity"* classifier, trained to discriminate between texts of the Italian Wikinews articles and texts of the joke-news website http://lercio.it. The former dataset was collected by downloading the official dump, whilst the latter - by scraping the website.
+   - A *"Referencity"* classifier, trained on the texts of the Italian Wikipedia to predict whether a given sentence would be followed by a reference footnote. Presumably, such sentences would contain facts which may require checking.
 
    As is usual for a hackathon, not much time was spent on tuning the classifiers (just getting and cleaning the data is time-consuming enough). The most basic tokenization strategy along with a Naive Bayes classifier tucked on top seemed to produce results which were reasonable and fun enough for a prototype. 
 
@@ -58,17 +58,17 @@ If you want to try changing the models, consider studying the contents of the ``
 
 Creators
 --------
- - Konstantin Tretyakov
- - Valerio Viperino
- - Danilo Bruno
- - Guglielmo Senese
- - Giacomo Saliola
- - Daniele Ciciani
- - Marco Brilli
+- Konstantin Tretyakov
+- Valerio Viperino
+- Danilo Bruno
+- Guglielmo Senese
+- Giacomo Saliola
+- Daniele Ciciani
+- Marco Brilli
 
 License
 -------
- - The source code of the project is subject to the MIT License.
- - The texts of the webpage, the logo and team images are not licensed for public redistribution.
- - The project relies on several third-party open-source libraries. 
+- The source code of the project is subject to the MIT License.
+- The texts of the webpage, the logo and team images are not licensed for public redistribution.
+- The project relies on several third-party open-source libraries. 
    Each of these libraries may be subject to its own license.
